@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "nombre": "Juan P\u00e9rez",
+    "username": "juanp",
+    "correo": "juanp@example.com"
+  },
+  {
+    "id": 2,
+    "nombre": "Ana G\u00f3mez",
+    "username": "anag",
+    "correo": "anag@example.com"
+  },
+  {
+    "id": 3,
+    "nombre": "Luis Mart\u00ednez",
+    "username": "luism",
+    "correo": "luism@example.com"
+  },
+  {
+    "id": 4,
+    "nombre": "Carmen Rodr\u00edguez",
+    "username": "carmenr",
+    "correo": "carmen@example.com"
+  },
+  {
+    "id": 5,
+    "nombre": "Jos\u00e9 Torres",
+    "username": "jtorres",
+    "correo": "jtorres@example.com"
+  },
+  {
+    "id": 6,
+    "nombre": "Mar\u00eda Fern\u00e1ndez",
+    "username": "mferna",
+    "correo": "mariaf@example.com"
+  },
+  {
+    "id": 7,
+    "nombre": "Sof\u00eda L\u00f3pez",
+    "username": "sofil",
+    "correo": "sofia@example.com"
+  },
+  {
+    "id": 8,
+    "nombre": "Andr\u00e9s G\u00f3mez",
+    "username": "andresg",
+    "correo": "andresg@example.com"
+  },
+  {
+    "id": 9,
+    "nombre": "Elena P\u00e9rez",
+    "username": "elenap",
+    "correo": "elena@example.com"
+  },
+  {
+    "id": 10,
+    "nombre": "Fernando D\u00edaz",
+    "username": "ferdiaz",
+    "correo": "ferdiaz@example.com"
+  },
+  {
+    "id": 11,
+    "nombre": "Laura S\u00e1nchez",
+    "username": "lauras",
+    "correo": "laura@example.com"
+  },
+  {
+    "id": 12,
+    "nombre": "Ricardo Moreno",
+    "username": "ricardo",
+    "correo": "ricardo@example.com"
+  },
+  {
+    "id": 13,
+    "nombre": "Prueba",
+    "username": "jesulin jiemnez",
+    "correo": "jesusdavidjimenez@gmail.com"
+  }
+]

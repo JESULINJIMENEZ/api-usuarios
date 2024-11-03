@@ -1,9 +1,26 @@
+import json
+import os
 from fastapi import APIRouter, HTTPException
-from typing import List  # Asegúrate de incluir esta línea
+from typing import List
 from app.models.user import User
-from app.database.fake_db import users_db
 
 router = APIRouter()
+file_path = "users.json"
+
+# Función para cargar usuarios desde el archivo
+def load_users():
+    if os.path.exists(file_path):
+        with open(file_path, "r") as file:
+            return json.load(file)
+    return []
+
+# Función para guardar usuarios en el archivo
+def save_users(users):
+    with open(file_path, "w") as file:
+        json.dump(users, file)
+
+# Cargar los usuarios al inicio
+users_db = load_users()
 
 @router.post("/users/", response_model=User)
 def create_user(user: User):
@@ -13,6 +30,7 @@ def create_user(user: User):
     new_id = max(u["id"] for u in users_db) + 1 if users_db else 1
     user.id = new_id
     users_db.append(user.dict())
+    save_users(users_db)  # Guardar cambios en el archivo
     return user
 
 @router.get("/users/", response_model=List[User])
@@ -35,6 +53,7 @@ def update_user(user_id: int, user: User):
                 
             user.id = user_id
             users_db[index] = user.dict()
+            save_users(users_db)  # Guardar cambios en el archivo
             return user
     raise HTTPException(status_code=404, detail="User not found")
 
@@ -43,5 +62,6 @@ def delete_user(user_id: int):
     for index, user in enumerate(users_db):
         if user["id"] == user_id:
             del users_db[index]
+            save_users(users_db)  # Guardar cambios en el archivo
             return
     raise HTTPException(status_code=404, detail="User not found")
